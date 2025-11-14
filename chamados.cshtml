@@ -1,0 +1,101 @@
+﻿@page
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamados Abertos - AgilizaTI</title>
+    <link rel="icon" type="logo-icon" href="#">
+    <link rel="stylesheet" href="~/css/chamados.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="/Img/AgilizaTI.v2.png" alt="Logo AgilizaTI" />
+            </div>
+            <div class="logo-text">
+                <span>AgilizaTI</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-label">Colaborador</div>
+            <a href="abrirchamado" class="menu-item">
+                <span class="menu-icon">⊞</span>
+                <span>Abrir Chamado</span>
+            </a>
+            <a href="chamados" class="menu-item active">
+                <span class="menu-icon">≡</span>
+                <span>Acompanhar Chamados</span>
+            </a>
+        </div>
+        <button class="exit-btn">
+            <span>Sair</span>
+        </button>
+    </aside>
+
+    <div class="main-container">
+        <header class="header">
+            <div class="header-icons">
+                <i class="bi bi-bell notification-icon"></i> <i class="bi bi-person-circle user-avatar"></i>
+            </div>
+        </header>
+
+        <div class="content">
+            <h1 class="page-title">Acompanhar Chamados</h1>
+
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label class="filter-label">Filtrar por Status</label>
+                    <select class="filter-select" id="filtroStatus">
+                        <option>Todos</option>
+                        <option>Aberto</option>
+                        <option>Em Andamento</option>
+                        <option>Resolvido</option>
+                        <option>Fechado</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label class="filter-label">Filtrar por Período</label>
+                    <select class="filter-select" id="filtroPeriodo">
+                        <option>Últimos 30 dias</option>
+                        <option>Últimos 7 dias</option>
+                        <option>Últimos 90 dias</option>
+                        <option>Todos os períodos</option>
+                    </select>
+                </div>
+
+                <button class="apply-filters-btn" id="aplicarFiltros">Aplicar Filtros</button>
+            </div>
+
+            <div class="table-section">
+                <div class="table-title">Meus Chamados</div>
+                <table id="tabelaChamados">
+                    <thead>
+                        <tr>
+                            <th>ID DO CHAMADO</th>
+                            <th>TÍTULO</th>
+                            <th>STATUS</th>
+                            <th>TÉCNICO RESPONSÁVEL</th>
+                            <th>DATA DE ABERTURA</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabela">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/chamados.js"></script>
+</body>
+</html>

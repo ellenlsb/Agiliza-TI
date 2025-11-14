@@ -1,0 +1,84 @@
+﻿@page
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie sua Nova Senha</title>
+    <link rel="stylesheet" href="~/css/nsenha.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-card">
+            <!-- Logo do Agiliza TI -->
+            <img src="/Imagem/AgilizaTI.v2.png" alt="Logo AgilizaTI" class="login-logo" />
+            
+
+            <div class="icon-container">
+            </div>
+
+            <h1 class="main-title">Crie sua Nova Senha</h1>
+
+            <form class="form">
+                <div class="field-group">
+                    <label for="password" class="field-label">Nova Senha</label>
+                    <div class="input-container">
+                        <input id="password"
+                               type="password"
+                               placeholder="Insira sua nova senha"
+                               class="input-field" />
+                        <button type="button" class="eye-button" onclick="togglePassword('password')">
+                            <svg class="eye-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" fill="none" />
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="requirements">
+                    <p class="requirements-title">A senha deve conter:</p>
+                    <ul class="requirements-list">
+                        <li>Mínimo de 8 caracteres</li>
+                        <li>Incluindo letras maiúsculas e minúsculas</li>
+                        <li>Um número</li>
+                        <li>Um símbolo</li>
+                    </ul>
+                </div>
+
+                <div class="field-group">
+                    <label for="confirmPassword" class="field-label">Confirmar Nova Senha</label>
+                    <div class="input-container">
+                        <input id="confirmPassword"
+                               type="password"
+                               placeholder="Confirme sua nova senha"
+                               class="input-field" />
+                        <button type="button" class="eye-button" onclick="togglePassword('confirmPassword')">
+                            <svg class="eye-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" fill="none" />
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">Redefinir Senha</button>
+
+                <div class="back-link-container">
+                    <a href="/Login">
+                        <button type="button" class="back-link">Voltar ao Login</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+        <script src="~/js/nsenha.js"></script>
+</body>
+</html>

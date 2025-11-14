@@ -1,0 +1,114 @@
+﻿@page
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Chamado</title>
+    <link rel="icon" type="logo-icon" href="#">
+    <link rel="stylesheet" href="~/css/abrirchamado.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="/Imagem/AgilizaTI.logov2.png" alt="Logo AgilizaTI" />
+            </div>
+            <div class="logo-text">
+                <span>AgilizaTI</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-label">Colaborador</div>
+            <a href="Abrirchamado" class="menu-item active">
+                <span class="menu-icon">⊞</span>
+                <span>Abrir Chamado</span>
+            </a>
+            <a href="chamados" class="menu-item">
+                <span class="menu-icon">≡</span>
+                <span>Acompanhar Chamados</span>
+            </a>
+        </div>
+        <button class="exit-btn">
+            <span>Sair</span>
+        </button>
+    </aside>
+
+    <div class="main-container">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+        <header class="header">
+            <div class="header-icons">
+                <i class="bi bi-bell notification-icon"></i>                 <i class="bi bi-person-circle user-avatar"></i>            
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="content-header">
+                <h1>Abrir Novo Chamado</h1>
+                <p>Preencha os detalhes abaixo para nos ajudar a resolver seu problema.</p>
+            </div>
+
+            <div class="form-container">
+                <form id="formulario-chamado">
+                    <div class="form-group">
+                        <label class="form-label">Título do Chamado</label>
+                        <input type="text" id="campo-titulo" class="form-input" placeholder="Ex: Problema com acesso ao sistema X" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Descrição Detalhada</label>
+                        <textarea id="campo-descricao" class="form-textarea" placeholder="Descreva o problema com o máximo de detalhes possível, incluindo passos para reproduzir, mensagens de erro, etc." required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Categoria</label>
+                            <select id="campo-categoria" class="form-select" required>
+                                <option value="">Selecione a categoria</option>
+                                <option value="1">Acesso ao Sistema</option>
+                                <option value="2">Erro Técnico</option>
+                                <option value="3">Dúvida Geral</option>
+                                <option value="4">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Prioridade</label>
+                            <select id="campo-prioridade" class="form-select">
+                                <option value="">Selecione a prioridade</option>
+                                <option value="1">Baixa</option>
+                                <option value="2">Média</option>
+                                <option value="3">Alta</option>
+                                <option value="4">Crítica</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="file-upload-section">
+                        <span class="file-upload-label">Anexo (Opcional)</span>
+                        <button class="file-upload-btn">
+
+                            <i class="fas fa-cloud-upload-alt file-icon"></i>
+                            Selecionar Arquivo
+                        </button>
+                        <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+                        <p id="fileFeedback" style="margin-top: 8px; font-size: 13px; color: #555;"></p>
+                    </div>
+
+                    <p id="mensagem-status" style="margin-top: 15px;"></p>
+
+                    <button type="submit" id="botao-enviar" class="submit-btn">Enviar Chamado</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/abrirchamado.js"></script>
+</body>
+</html>

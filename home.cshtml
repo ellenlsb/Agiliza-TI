@@ -1,0 +1,150 @@
+﻿@page
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>AgilizaTI</title> 
+    <link rel="icon" type="logo-icon" href="#"> 
+    <link rel="stylesheet" href="~/css/home.css"> 
+</head>
+<body>
+
+    <!-- Header: Cabeçalho do site -->
+    <header>
+        <div class="logo">
+            <span>AgilizaTI</span> <
+        </div>
+        <nav>
+            <!-- Menu de navegação -->
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+            <div class="search-container">
+                <!-- Campo de busca -->
+                <input type="text" placeholder="Pesquisar...">
+            </div>
+            <a href="login">
+                <!-- Botão de login -->
+                <button class="login-btn">Login</button>
+            </a> 
+
+        </nav>
+    </header>
+
+    <!-- Seção principal (Hero): destaque inicial do site -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sua jornada digital simplificada.</h1> 
+            <p>Oferecemos soluções inovadoras de TI para otimizar sua empresa, garantir segurança e impulsionar o crescimento. Transforme desafios em oportunidades com a AgilizaTI.</p>
+            <button class="hero-btn">Login</button> 
+        </div>
+        <div class="hero-image">
+            <img src="/Img/AgilizaTI.v2.png" alt="AgilizaTI" />
+        </div>
+    </section>
+
+    <!-- About Section: seção "Quem Somos" -->
+    <section class="about" id="sobre">
+        <h2>Quem Somos</h2>
+        <p>Na AgilizaTI, somos apaixonados por tecnologia e dedicados a fornecer soluções de TI que realmente fazem a diferença para nossos clientes. Com anos de experiência no mercado, nossa equipe de especialistas trabalha incansavelmente para entender suas necessidades e entregar resultados que superam expectativas. Acreditamos que a tecnologia deve ser um facilitador, não um obstáculo.</p>
+    </section>
+
+    <!-- Services Section: seção de serviços oferecidos -->
+    <section class="services" id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="services-grid">
+            <!-- Grade que organiza os cards de serviços -->
+            <div class="service-card">
+                <div class="service-icon">📄</div>
+                <h3>Abertura de Chamados Online</h3>
+                <p>Abra seu chamado em poucos cliques e acompanhe o status em tempo real.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>Triagem Automática com IA</h3>
+                <p>Nossa IA analisa seu problema e direciona para a equipe certa, agilizando a solução.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">☁️</div>
+                <h3>Suporte Técnico Remoto</h3>
+                <p>Resolva problemas sem precisar sair do seu computador, com atendimento rápido e eficiente.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Relatórios e Histórico de Chamados</h3>
+                <p>enha acesso a todos os chamados anteriores, ajudando no acompanhamento e prevenção de problemas.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Prioridade para Problemas Críticos</h3>
+                <p>Chamados mais urgentes recebem atenção imediata, garantindo que nada fique parado.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Suporte Técnico Especializado</h3>
+                <p>Nossa equipe oferece suporte técnico ágil e eficiente, garantindo que suas operações de TI funcionem sem interrupções.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: rodapé do site -->
+    <footer>
+        <div class="footer-content">
+            <!-- Conteúdo principal do rodapé -->
+            <div>
+                <div class="footer-brand">
+                    <!-- Logo e slogan no rodapé -->
+                    <div class="logo-icon">⚡</div>
+                    <span>AgilizaTI</span>
+                </div>
+                <p class="footer-description">Soluções inovadoras de TI para o sucesso do seu negócio.</p>
+                <div class="social-links">
+                    <!-- Ícones das redes sociais -->
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="LinkedIn">in</a>             
+                </div>
+            </div>
+            <div class="footer-column">
+                <!-- Coluna: Empresa -->
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Imprensa</a></li>
+                    <li><a href="#">Parceiros</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <!-- Coluna: Serviços -->
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#">Consultoria em TI</a></li>
+                    <li><a href="#">Segurança</a></li>
+                    <li><a href="#">Cloud</a></li>
+                    <li><a href="#">Infraestrutura</a></li>
+                    <li><a href="#">Desenvolvimento</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <!-- Coluna: Recursos -->
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Estudos de Caso</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Suporte</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <!-- Linha inferior com direitos autorais -->
+            <p>© 2025 AgilizaTI. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

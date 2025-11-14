@@ -1,0 +1,44 @@
+﻿@page
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/login.css">
+</head>
+<body>
+    <main class="page login">
+        <section class="card">
+
+            <!-- Logo do Agiliza TI -->
+            <img src="/Img/AgilizaTI.v2.png" alt="AgilizaTI" class="login-logo" />
+            <h1>Login</h1>
+            <p class="muted">Entre com seu usuário para acessar o sistema.</p>
+
+            <form id="formulario-login">
+                <label for="email">E-mail</label>
+                <input id="campo-email" type="email" placeholder="seu@exemplo.com" required> <label for="password">Senha</label>
+                <input id="campo-senha" type="password" placeholder="••••••••" required> <div class="row">
+                    <label class="remember"><input type="checkbox"> Lembrar-me</label>
+                    <a href="../Senha" class="link">Esqueceu a senha?</a>
+                </div>
+
+                <button id="botao-login" type="submit">Entrar</button>
+            </form>
+
+            <p id="mensagem-erro" style="color: red; display: none;">
+                Usuário ou senha incorretos.
+            </p>
+        </section>
+    </main>
+
+    <!-- Link do script JavaScript -->
+    <script src="~/js/login.js"></script>
+</body>
+</html>
+
